@@ -16,10 +16,10 @@
 def find_dup(numbers):
 	histogram = {}
 	for x in numbers:
-		if histogram[x] == 1:
-			return True
-		else:
+		if histogram.get(x) == None:
 			histogram[x]=1
+		else:
+			return True
 	return False
 
 print(find_dup([0,0,1,2,3,]))
